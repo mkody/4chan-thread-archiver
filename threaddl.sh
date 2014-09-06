@@ -52,7 +52,7 @@ fi
 
 ST="s.4cdn.org"
 [ ! $SLP ] && SLP="10"
-[ ! $RET ] && RET="./"
+RET="./"
 SLAP=$SLP
 NO=$(echo "$LOC" | grep -o '[0-9]\+$')
 BO=$(echo "$LOC" | grep -o '^[^_]\+')
@@ -118,7 +118,7 @@ EOF
   		s@ data-src="[^.]\+\.\([^"]\+\)">@><img alt="4chan" src="/4chan/misc/logo.php" />@
 		s_<hr class="abovePost_\n_
 		s_ .<a[^>]*>Catalog</a>.__g
-		s_\(<div class="navLinks desktop">.<a href="/[^/]\+/[^#]*\)#bottom\(">Bottom</a>.\)_\n<!\1javascript:dE.scrollIntoView(false)\2</div><hr>\n_
+		s_\(<div class="navLinks desktop">\[<a \)href="/[^/]\+/"[^>]*>Return</a>\] \[<a href="#bottom\(">Bottom</a>.\)_\n<!\1href="./">Return</a>\] \[<a href="javascript:dE.scrollIntoView(false)\2</div><hr>\n_
 		s_\(<form name="delform" id="delform"\)[^>]*_\n<!\1_
 		s@//.\.t\.4cdn\.org/[^/]*/\([0-9]*s\.jpg\)@'$LOC'/misc/\1@g
 		s@//i\.4cdn\.org/[^/]*/\([0-9]*\....\)@'$LOC'/\1@g
@@ -130,8 +130,8 @@ EOF
 		s_\(<a href="\)'$NO'#p_\1#p_g
 		s_<a href="#p'$NO'"[^>]*>&gt;&gt;'$NO'_& (OP)_g
 		s:\(<a href="\)\([0-9]\+\)\(#p[0-9]*\)\([^<]*\):\1'$BO'_\2.html" target="_blank" \3 (Cross-thread):g
-		s_\(<div class="navLinks navLinksBot desktop">.<a href="/[^/]\+/"[^>]*>Return</a>. .<a href="\)#top\(">Top</a>.\)_\n<!<span style="float:right;">Style: [ <a href="javascript:sT(1);dE.scrollIntoView(false)">Default</a> | <a href="javascript:sT(0);dE.scrollIntoView(false)">Tomorrow</a> ]</span>\1javascript:dE.scrollIntoView()\2\n_
-		s@</body>@\n<!</div></div></form>&@}' -e '{s:\(<a href="\)/./\([^>]*>Return</a>\):\1'"$RET"'\2:g
+		s_\(<div class="navLinks navLinksBot desktop">\[<a \)href="/[^/]\+/"[^>]*>Return</a>\] \[<a href="#top\(">Top</a>\]\)_\n<!<span style="float:right;">Style: [ <a href="javascript:sT(1);dE.scrollIntoView(false)">Default</a> | <a href="javascript:sT(0);dE.scrollIntoView(false)">Tomorrow</a> ]</span>\1href="./">Return</a>\] \[<a href="javascript:dE.scrollIntoView()\2\n_
+		s@</body>@\n<!</div></div></form>&@}' -e '{s:\(<a href="\)/./\([^>]*>!Return</a>\):\1'"$RET"'\2:g
 		s_\(<a[^>]*href="\)//_\1http://_g
 		s_\(<a[^>]*\) onclick="replyhl[^"]*"_\1_g
 		s_\(<a href="javascript:\)quote[^>]*_\1;"_g
