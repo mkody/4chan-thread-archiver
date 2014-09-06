@@ -67,4 +67,4 @@ Archive Layout
 
     <number of OP post>.html: the thread
     <board name>-<number of OP post>_<name of thread if provided>/: contains full resolution images
-    --misc/: contains thumbnails, css, logo image, gallery, misc stuff
+    misc/: contains thumbnails, css, logo image, gallery, misc stuff
