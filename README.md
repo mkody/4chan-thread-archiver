@@ -10,6 +10,7 @@ Notes
 * Works on Android with the proper GNU tools (use Google to find these).
     **Please edit** the interpreter in the first line before using it on Android!
 * This fork may not correctly work for you, since I'm using it at a `4chan` subdirectory from webroot AND I've put an another *gallery* viewer in this folder first. You can see how it looks for me [HERE](http://up.kdy.ch/4chan/) (Note: old threads were made by an another script)
+* The gallery script mentionned before can be found here: https://gist.github.com/mkody/0297412173ffbf0a08f5/
 * The script saves the thread to the current location of the console. So be at the /4chan/ website subfolder
 * HTTPS protocol is ignored, HTTP is used for everything
 * The thread's HTML is cleaned up of everything not necessary, which
@@ -65,6 +66,7 @@ https://boards.4chan.org/vg/thread/69229732/tera-general-terag
 Archive Layout
 --------------
 
+    misc/: contains css, logo image, misc stuff
     <number of OP post>.html: the thread
     <board name>-<number of OP post>_<name of thread if provided>/: contains full resolution images
-    misc/: contains thumbnails, css, logo image, gallery, misc stuff
+    --misc/: contains thumbnails and list of files
