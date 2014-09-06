@@ -42,6 +42,18 @@ Copying
 
 Whatever
 
+Downloading
+-----------
+
+- First, open a command line (terminal) access to where the files will be.
+- If you want to access it from your browser, please go (with `cd` command) to the webroot folder for your website. (At the moment, not in a subfolder or anything, just use the next command at the root of your website.)
+- Execute `git clone https://github.com/mkody/4chan-thread-archiver 4chan && cd 4chan && chmod +x threaddl.sh`
+- You can put the `index.php` with the gallery, find it here: https://gist.github.com/mkody/0297412173ffbf0a08f5/
+(Yes, I should put the file here, but I'm editing everything from the browser)
+- You're ready!
+
+The files will be accessible in the 4chan folder of you're website (`http://exemple.com/4chan/`)
+
 Archiving
 ---------
 
